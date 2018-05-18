@@ -6,8 +6,9 @@ extern crate woothee;
 use std::collections::HashMap;
 use woothee::parser::{Parser, WootheeResult};
 use pyo3::prelude::*;
+use pyo3::py::modinit as pymodinit;
 
-#[py::modinit(fast_woothee)]
+#[pymodinit(fast_woothee)]
 fn init_mod(py: Python, m: &PyModule) -> PyResult<()> {
 
     #[pyfn(m, "parse")]
