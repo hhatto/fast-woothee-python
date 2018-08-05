@@ -9,7 +9,7 @@ use woothee::parser::{Parser, WootheeResult};
 use pyo3::prelude::*;
 
 #[pymodinit(fast_woothee)]
-fn init_mod(py: Python, m: &PyModule) -> PyResult<()> {
+fn init_mod(_py: Python, m: &PyModule) -> PyResult<()> {
 
     #[pyfunction]
     pub fn parse(agent: &str) -> PyResult<HashMap<String, String>> {
