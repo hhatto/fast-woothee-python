@@ -24,7 +24,6 @@ fn init_mod(_py: Python, m: &PyModule) -> PyResult<()> {
         h.insert("category".to_string(), r.category.to_string());
         h.insert("os".to_string(), r.os.to_string());
         h.insert("os_version".to_string(), r.os_version.to_string());
-        h.insert("browser_type".to_string(), r.browser_type.to_string());
         h.insert("version".to_string(), r.version.to_string());
         h.insert("vendor".to_string(), r.vendor.to_string());
         Ok(h)
