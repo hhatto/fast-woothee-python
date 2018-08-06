@@ -1,15 +1,18 @@
 language: python
 
 python:
-    - "3.6"
+    - 3.6
+    - 3.7
 
 dist: trusty
+sudo: false
 
 matrix:
     include:
-        - python: "3.6"
-        - python: "3.7"
+        - python: 3.6
+        - python: 3.7
           dist: xenial
+          sudo: true
 
 addons:
     apt:
