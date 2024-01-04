@@ -2,16 +2,6 @@
 
 Python Bindings to [woothee-rust](https://github.com/woothee/woothee-rust).
 
-## Requirements
-
-* [setuptools-rust](https://github.com/PyO3/setuptools-rust)
-* Nightly Rust
-
-```
-$ pip install setuptools_rust
-$ rustup default nightly
-```
-
 ## Installation
 
 ```
