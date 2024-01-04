@@ -1,0 +1,4 @@
+benchmarker
+ua_parser
+woothee
+git+https://github.com/hhatto/fast-woothee-python.git#egg=fast_woothee
