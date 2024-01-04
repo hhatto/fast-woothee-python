@@ -21,31 +21,28 @@ print(woothee.parse(ua))
 
 ```
 ## benchmarker:         release 4.0.1 (for python)
-## python version:      3.6.3
-## python compiler:     GCC 4.2.1 Compatible Apple LLVM 8.1.0 (clang-802.0.42)
-## python platform:     Darwin-16.7.0-x86_64-i386-64bit
-## python executable:   /Users/hattori-h/.virtualenvs/py363/bin/python
-## cpu model:           Intel(R) Core(TM) i5-5257U CPU @ 2.70GHz
+## python version:      3.11.7
+## python compiler:     Clang 15.0.0 (clang-1500.1.0.2.5)
+## python platform:     macOS-14.1.2-x86_64-i386-64bit
+## python executable:   python
+## cpu model:           Intel(R) Core(TM) i7-10700K CPU @ 3.80GHz
 ## parameters:          loop=100000, cycle=1, extra=0
 
 ##                                       real    (total    = user    + sys)
-uap                                    0.0875    0.0800    0.0800    0.0000
-uap(non-cache)                        67.4911   65.7300   65.2100    0.5200
-woothee                                1.9323    1.8800    1.8600    0.0200
-fast-woothee                           1.4410    1.3300    1.3100    0.0200
+uap                                    0.0436    0.0400    0.0400    0.0000
+uap(non-cache)                         0.0480    0.0500    0.0500    0.0000
+woothee                                0.6790    0.6800    0.6800    0.0000
+fast-woothee                           0.3756    0.3700    0.3700    0.0000
 
 ## Ranking                               real
-uap                                    0.0875  (100.0) ********************
-fast-woothee                           1.4410  (  6.1) *
-woothee                                1.9323  (  4.5) *
-uap(non-cache)                        67.4911  (  0.1)
+uap                                    0.0436  (100.0) ********************
+uap(non-cache)                         0.0480  ( 90.8) ******************
+fast-woothee                           0.3756  ( 11.6) **
+woothee                                0.6790  (  6.4) *
 
 ## Matrix                                real    [01]    [02]    [03]    [04]
-[01] uap                               0.0875   100.0  1647.0  2208.5 77138.7
-[02] fast-woothee                      1.4410     6.1   100.0   134.1  4683.7
-[03] woothee                           1.9323     4.5    74.6   100.0  3492.8
-[04] uap(non-cache)                   67.4911     0.1     2.1     2.9   100.0
-
+[01] uap                               0.0436   100.0   110.1   860.8  1556.4
+[02] uap(non-cache)                    0.0480    90.8   100.0   781.9  1413.5
+[03] fast-woothee                      0.3756    11.6    12.8   100.0   180.8
+[04] woothee                           0.6790     6.4     7.1    55.3   100.0
 ```
-
-[benchmark script](https://gist.github.com/hhatto/c951a981e8a3ee4d1bbcf96cb93d5f5e)
