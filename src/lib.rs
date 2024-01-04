@@ -1,12 +1,11 @@
-#![feature(specialization)]
-
 use std::collections::HashMap;
 use woothee::parser::{Parser, WootheeResult};
 use pyo3::prelude::*;
 use pyo3::wrap_pyfunction;
 
 #[pymodule]
-fn init_mod(_py: Python, m: &PyModule) -> PyResult<()> {
+#[pyo3(name = "_woothee")]
+fn fast_woothee(_py: Python, m: &PyModule) -> PyResult<()> {
 
     #[pyfunction]
     pub fn parse(agent: &str) -> PyResult<HashMap<String, String>> {
