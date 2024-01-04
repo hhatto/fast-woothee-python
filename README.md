@@ -1,4 +1,4 @@
-# fast-woothee-python [![](https://travis-ci.org/hhatto/fast-woothee-python.svg?branch=master)](https://travis-ci.org/hhatto/fast-woothee-python)
+# fast-woothee-python [![build](https://github.com/hhatto/fast-woothee-python/actions/workflows/python-package.yml/badge.svg?branch=main)](https://github.com/hhatto/fast-woothee-python/actions/workflows/python-package.yml)
 
 Python Bindings to [woothee-rust](https://github.com/woothee/woothee-rust).
 
