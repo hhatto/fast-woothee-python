@@ -5,7 +5,7 @@ use pyo3::wrap_pyfunction;
 
 #[pymodule]
 #[pyo3(name = "_woothee")]
-fn fast_woothee(_py: Python, m: &PyModule) -> PyResult<()> {
+fn fast_woothee(m: &Bound<'_, PyModule>) -> PyResult<()> {
 
     #[pyfunction]
     pub fn parse(agent: &str) -> PyResult<HashMap<String, String>> {
