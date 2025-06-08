@@ -6,7 +6,7 @@ license = {text = "MIT"}
 authors = [
     {name = "Hideo Hattori", email = "hhatto.jp@gmail.com"},
 ]
-requires-python = ">=3.8"
+requires-python = ">=3.10"
 keywords = ["path", "rust"]
 classifier = [
     "Development Status :: 3 - Alpha",
@@ -19,7 +19,7 @@ dependencies = []
 
 [project.optional-dependencies]
 dev = [
-    "maturin==1.4.0"
+    "maturin==1.8.6"
 ]
 
 
@@ -28,7 +28,7 @@ homepage = "https://github.com/hhatto/fast-woothee-python"
 repository = "https://github.com/hhatto/fast-woothee-python"
 
 [build-system]
-requires = ["maturin==1.4.0"]
+requires = ["maturin==1.8.6"]
 build-backend = "maturin"
 
 [tool.maturin]
