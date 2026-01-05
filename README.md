@@ -46,3 +46,15 @@ woothee                                0.6790  (  6.4) *
 [03] fast-woothee                      0.3756    11.6    12.8   100.0   180.8
 [04] woothee                           0.6790     6.4     7.1    55.3   100.0
 ```
+
+## For Developer
+
+build and install:
+```
+$ pip install -e .[dev]
+```
+
+build with maturin:
+```
+$ maturin build
+```

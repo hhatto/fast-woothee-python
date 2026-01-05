@@ -20,19 +20,19 @@ classifier = [
     "Programming Language :: Rust",
 ]
 dependencies = []
+dynamic = ["version"]
 
 [project.optional-dependencies]
 dev = [
-    "maturin==1.8.6"
+    "maturin==1.10.2"
 ]
-
 
 [project.urls]
 homepage = "https://github.com/hhatto/fast-woothee-python"
 repository = "https://github.com/hhatto/fast-woothee-python"
 
 [build-system]
-requires = ["maturin==1.8.6"]
+requires = ["maturin==1.10.2"]
 build-backend = "maturin"
 
 [tool.maturin]
