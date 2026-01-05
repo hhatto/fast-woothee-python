@@ -20,12 +20,12 @@ classifier = [
     "Programming Language :: Rust",
 ]
 dependencies = []
+dynamic = ["version"]
 
 [project.optional-dependencies]
 dev = [
     "maturin==1.8.6"
 ]
-
 
 [project.urls]
 homepage = "https://github.com/hhatto/fast-woothee-python"
