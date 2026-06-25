@@ -1,2 +1,3 @@
 target/
 fast_woothee/*.so
+__pycache__
