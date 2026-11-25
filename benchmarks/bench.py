@@ -1,5 +1,6 @@
 from benchmarker import Benchmarker
 from ua_parser import user_agent_parser as uap_parser
+from ua_parser import parse as uap_parse
 from woothee import parse as woothee_parse
 from fast_woothee import parse as fw_parse
 
@@ -17,7 +18,7 @@ with Benchmarker(n) as bench:
 
     @bench("uap(non-cache)")
     def _uap_noncache(bm):
-        parser = uap_parser.ParseUserAgent
+        parser = uap_parse
         for i in bm:
             parser(ua)
 

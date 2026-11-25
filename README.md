@@ -19,39 +19,41 @@ print(woothee.parse(ua))
 
 ## Performance
 
+`uv run python benchmarks/bench.py`
+
 ```
 ## benchmarker:         release 4.0.1 (for python)
-## python version:      3.11.7
-## python compiler:     Clang 15.0.0 (clang-1500.1.0.2.5)
-## python platform:     macOS-14.1.2-x86_64-i386-64bit
-## python executable:   python
-## cpu model:           Intel(R) Core(TM) i7-10700K CPU @ 3.80GHz
+## python version:      3.15.2
+## python compiler:     Clang 23.1.3
+## python platform:     macOS-27.0.1-arm64-arm-64bit-Mach-O
+## python executable:   /Users/hideohattori/work/fast-woothee-python/.venv/bin/python
+## cpu model:           Apple M3
 ## parameters:          loop=100000, cycle=1, extra=0
 
 ##                                       real    (total    = user    + sys)
-uap                                    0.0436    0.0400    0.0400    0.0000
-uap(non-cache)                         0.0480    0.0500    0.0500    0.0000
-woothee                                0.6790    0.6800    0.6800    0.0000
-fast-woothee                           0.3756    0.3700    0.3700    0.0000
+uap                                    0.0075    0.0100    0.0100    0.0000
+uap(non-cache)                         0.1201    0.1200    0.1200    0.0000
+woothee                                0.3324    0.3300    0.3300    0.0000
+fast-woothee                           0.1705    0.1800    0.1700    0.0100
 
 ## Ranking                               real
-uap                                    0.0436  (100.0) ********************
-uap(non-cache)                         0.0480  ( 90.8) ******************
-fast-woothee                           0.3756  ( 11.6) **
-woothee                                0.6790  (  6.4) *
+uap                                    0.0075  (100.0) ********************
+uap(non-cache)                         0.1201  (  6.2) *
+fast-woothee                           0.1705  (  4.4) *
+woothee                                0.3324  (  2.3)
 
 ## Matrix                                real    [01]    [02]    [03]    [04]
-[01] uap                               0.0436   100.0   110.1   860.8  1556.4
-[02] uap(non-cache)                    0.0480    90.8   100.0   781.9  1413.5
-[03] fast-woothee                      0.3756    11.6    12.8   100.0   180.8
-[04] woothee                           0.6790     6.4     7.1    55.3   100.0
+[01] uap                               0.0075   100.0  1601.0  2272.9  4432.4
+[02] uap(non-cache)                    0.1201     6.2   100.0   142.0   276.9
+[03] fast-woothee                      0.1705     4.4    70.4   100.0   195.0
+[04] woothee                           0.3324     2.3    36.1    51.3   100.0
 ```
 
 ## For Developer
 
-build and install:
+install depends:
 ```
-$ pip install -e .[dev]
+$ uv sync
 ```
 
 build with maturin:
