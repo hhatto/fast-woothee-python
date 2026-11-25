@@ -22,9 +22,12 @@ classifier = [
 dependencies = []
 dynamic = ["version"]
 
-[project.optional-dependencies]
+[dependency-groups]
 dev = [
-    "maturin==1.10.2"
+    "benchmarker",
+    "maturin==1.16.0",
+    "ua_parser",
+    "woothee",
 ]
 
 [project.urls]
@@ -32,7 +35,7 @@ homepage = "https://github.com/hhatto/fast-woothee-python"
 repository = "https://github.com/hhatto/fast-woothee-python"
 
 [build-system]
-requires = ["maturin==1.10.2"]
+requires = ["maturin==1.16.0"]
 build-backend = "maturin"
 
 [tool.maturin]
