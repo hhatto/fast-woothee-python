@@ -9,7 +9,7 @@ name = "_woothee"
 crate-type = ["cdylib"]
 
 [dependencies]
-woothee = "^0.10"
+woothee = "^0.13"
 
 [dependencies.pyo3]
 version = "0.30"
